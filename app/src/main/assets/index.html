@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website name</title>
+    <script type="text/javascript">
+        function browsepicture(){
+            Android.openGallary();
+        }
+        function uploadfunction(){
+            Android.uploadImage();
+        }
+        function setFileUri(uri) {
+            document.getElementById('lbluri').innerHTML = uri;
+        }
+
+    </script>
+</head>
+
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>Kitkat WebView</h1>
+        <p><a href="https://codemumbai.wordpress.com/android-webview-image-upload-solved/">modified from android-webview-image-upload-solved</a>
+        </p>
+    </div>
+
+    <div data-role="content">
+        <input type="button" value="Browse Gallary" onClick="browsepicture()"/>
+        <br>
+        <label id="lbluri"></label>
+        <br>
+        <input type="button" value="Upload" onClick="uploadfunction()"/>
+    </div>
+</div>
+
+</body>
+
+</html>
