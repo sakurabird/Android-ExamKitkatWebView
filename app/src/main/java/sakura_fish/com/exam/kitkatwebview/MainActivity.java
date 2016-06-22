@@ -154,11 +154,9 @@ public class MainActivity extends AppCompatActivity {
 
     @NeedsPermission({Manifest.permission.READ_EXTERNAL_STORAGE})
     void chooseImage() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-            i.setType("image/*");
-            startActivityForResult(Intent.createChooser(i, "File Chooser"), SELECT_PICTURE);
-        }
+        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+        i.setType("image/*");
+        startActivityForResult(Intent.createChooser(i, "File Chooser"), SELECT_PICTURE);
     }
 
     @Override
